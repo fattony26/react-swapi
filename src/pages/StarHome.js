@@ -10,27 +10,29 @@ class StarHome extends Component {
 
     componentDidMount() {
         apiService.getAllStarShips()
-        .then(starships => this.setState({
-            starships
-        }))
+            .then(starships => this.setState({
+                starships
+            }))
     }
 
     render() {
         return (
-            <div className="starShipContainer">
-                {
-                    this.state.starships.map((ship, ind) => (
-                        <Link 
-                            className='spaceShips' 
-                            key={ind}
-                            to='shipDetail'
-                            state={{ship}}
-                        >
-                         {ship.name}
-                        </Link>
-                    ))
-                }
-            </div>    
+            <>
+                <div className="starShipContainer">
+                    {
+                        this.state.starships.map((ship, ind) => (
+                            <Link
+                                className='spaceShips'
+                                key={ind}
+                                to='shipDetail'
+                                state={{ ship }}
+                            >
+                                {ship.name}
+                            </Link>
+                        ))
+                    }
+                </div>
+            </>
         )
     }
 }
