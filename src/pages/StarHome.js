@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import React, { Component } from 'react'
 import * as apiService from '../services/api-calls.js'
+import './App.css';
 
 class StarHome extends Component {
     state = {
@@ -20,7 +21,7 @@ class StarHome extends Component {
                 {
                     this.state.starships.map((ship, ind) => (
                         <Link 
-                            className='ships' 
+                            className='spaceShips' 
                             key={ind}
                             to='shipDetail'
                             state={{ship}}
