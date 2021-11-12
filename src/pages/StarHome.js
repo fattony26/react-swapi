@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import React, { Component } from 'react'
 import * as apiService from '../services/api-calls.js'
 import './App.css';
+import NavBar from './NavBar'
 
 class StarHome extends Component {
     state = {
@@ -18,6 +19,7 @@ class StarHome extends Component {
     render() {
         return (
             <>
+                <NavBar />
                 <div className="starShipContainer">
                     {
                         this.state.starships.map((ship, ind) => (
