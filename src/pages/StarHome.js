@@ -16,7 +16,7 @@ class StarHome extends Component {
 
     render() {
         return (
-            <div className="shipContainer">
+            <div className="starShipContainer">
                 {
                     this.state.starships.map((ship, ind) => (
                         <Link 
